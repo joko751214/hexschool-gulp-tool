@@ -2,44 +2,49 @@
   display: flex
   justify-content: center
   li
-    box-sizing: border-box
     border: 1px solid #DCDCDC
     width: 24%
     a
       display: flex
       justify-content: center
-      padding: 24px 0
+      align-items: center
+      border-bottom: 16px solid transparent
       img
         margin-right: 8px
-  .active
-    border-bottom: 16px solid #AA0601
+      &:hover
+        border-bottom: 16px solid #AA0601
+      &.active
+        border-bottom: 16px solid #AA0601
 .product-menu-image
   display: flex
   justify-content: space-between
-@media( max-width: 992px )
++pad()
   .product-menu-list
     li
       width: 33.33%
       a
         padding: 16px 0
-      img
-        width: 10%
-    .active
-      border-bottom: 8px solid #AA0601
-@media( max-width: 767px )
+        border-bottom: 8px solid transparent
+        img
+          width: 10%
+        &:hover
+          border-bottom: 8px solid #AA0601
+        &.active
+          border-bottom: 8px solid #AA0601
++iphone()
   .product-menu-list
     h2
       font-size: 14px
       line-height: 19px
     li
-      width: 33.33%
       a
-        padding: 16px 0
+        border-bottom: 4px solid transparent
         img
-          width: 10%
           margin-right: 4px
-    .active
-      border-bottom: 4px solid #AA0601
+        &:hover
+          border-bottom: 4px solid #AA0601
+        &.active
+          border-bottom: 4px solid #AA0601
 
 .product-case
   padding: 88px 0 168px
@@ -88,7 +93,7 @@
     background-color: #000
     a
       color: #fff
-@media( max-width: 992px )
++pad()
   .product-case
     padding: 40px 39px 104px
     h2
@@ -105,7 +110,7 @@
   .pagination
     li
       padding: 10px 15px 12px
-@media( max-width: 767px )
++iphone()
   .product-case
     padding: 30px 15px 56px
     h2
